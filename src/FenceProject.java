@@ -22,9 +22,16 @@ public class FenceProject {
 		System.out.println("What type of fence do you want?"); 
 		String type = keyboard.next(); 
 	
+		
 		System.out.println("How many gates do you want?"); 
 		num_gates = keyboard.nextInt();  
 		
+		while(num_gates > 3 || num_gates <= 0){
+			System.out.println("Enter a number between 1-3"); 
+			System.out.println("How many gates do you want?"); 
+			num_gates = keyboard.nextInt();
+		}
+			
 		
 		if (type.equals("wooden")){
 			 cost = feet * wood;
